@@ -1,0 +1,232 @@
+#
+# Be aware that even a small syntax error here can lead to failures in output.
+#
+
+sidebar:
+  position: right # position of the sidebar : left or right
+  education: True # set to False if you want education in main section instead of in sidebar
+
+  # Profile information
+  name: 정건우
+  tagline: Frontend Developrt
+  avatar: geonwoo.jpg #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
+
+  # Sidebar links
+  email: doscmdev@gmail..com
+  phone: 010-4808-5382
+  # timezone: America/Cancun Timezone
+  citizenship:
+  website: www.zigae.com
+  # linkedin: alandoe
+  # xing: alandoe
+  github: zi-gae
+  # telegram: # add your nickname without '@' sign
+  # gitlab:
+  # bitbucket:
+  # twitter: "@webjeda"
+  # stack-overflow: # Number/Username, e.g. 123456/alandoe
+  # codewars:
+  # goodreads: # Number-Username, e.g. 123456-alandoe
+  # pdf: http://www.africau.edu/images/default/sample.pdf
+
+  # languages:
+  #   title: Languages
+  #   info:
+  #     - idiom: English
+  #       level: Native
+
+  #     - idiom: French
+  #       level: Professional
+
+  #     - idiom: Spanish
+  #       level: Professional
+
+  # interests:
+  #   title: Interests
+  #   info:
+  #     - item: Climbing
+  #       link:
+
+  #     - item: Snowboarding
+  #       link:
+
+  #     - item: Cooking
+  #       link:
+
+career-profile:
+  title: Introduce
+  summary: |
+    - 그룹 조직 보다는 팀 조직 위해 발전합니다.
+    - 개발로 시작해 개발로 끝나는 하루를 즐깁니다.
+    - 집 보다 코드가 깨끗한 개발자입니다.
+education:
+  title: Education
+  info:
+    - degree: 컴퓨터공학 석사
+      university: 동명대학교
+      time: 2014 - 2020
+      # details: |
+      #   Describe your study here lorem ipsum dolor sit amet, consectetuer
+      #   adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
+      #   sociis natoque penatibus et magnis dis parturient montes, nascetur
+      #   ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
+      #   pretium quis, sem.
+      #     - Bullet point
+      #     - Bullet point
+
+experiences:
+  title: 마이리얼트립 / 2021.08 - Present
+  info:
+    - role: 통합숙소
+      # time: 2021.08 - Present
+      company: Frontend Developer
+      details: |
+        국내외 숙소 도메인을 통합하는 작업을 개발 했으며, 총 2명의 FE 개발자로 
+        프로젝트 진행에 키를 잡고 정책 검토부터 소통까지 맡아 진행. <b>작업 대비 일 GMV 3000만 => 7000만 상승</b>
+
+        - Nextjs, react-query, typescript, jenkins, docker, EC2, ECR
+        - 디자인시스템 개편 작업과 동시에 진행하며 모놀로틱한 컴포넌트 형태로 개발
+        - 로컬스토리지와 상태(state) 동기화 모듈 및 URL 쿼리 상태 동기화 모듈 개발
+        - 타입스크립트 원본 모델과 타입 레이어를 분리한 타입 체이닝 디자인 도입
+        - CSR => SSR 인증 방식 변경 
+        - @tanstack/table 크로스브라우징 관련 트러블슈팅 오픈소스 기여
+
+    - role: 연동사 직계약 어드민 페이지 개발
+      # time: 2014 - 2015
+      company: Frontend Developer
+      details: |
+        직계약 상품들을 등록 할 수 있는 어드민 페이지 구축, 총 2명의 FE 개발자로 진행 되었음.
+          - React, react-query, redux, typescript
+          - 정책 변경을 고려한 아토믹한 uncontrolled, controlled 컴포넌트 선행 개발
+          - 높은 렌더링 비용이 발생하는 페이지 최적화 작업
+    - role: DX 개선 작업
+      # time: 2012 - 2014
+      company: Frontend Developer
+      details: |
+        팀 내 개발자 경험 향상을 위해 자동화 가능한 영역 자동화를 진행해 개발자 경험을 높이는 작업
+          - 신규 입사자를 위한 개발 환경 세팅 스크립트 작성
+          - 로컬머신에서 환경변수가 항상 최신 상태를 유지하도록 빌드 스크립트 수정
+          - 디자인 시스템 카나리 배포 및 시멘틱 버저닝 환경 구축
+          - 깃헙 이벤트를 슬랙으로 받아 보기 위한 커스텀 깃헙액션 개발 [Marketplace](https://github.com/marketplace/actions/myrealtrip-slack-notify)
+
+zigbang:
+  title: 직방 / 2021.05 - 07 (계약)
+  info:
+    - role: 디자인 검수 시스템
+      # time: 2021.08 - Present
+      company: Frontend Developer
+      details: |
+        개발 단계의 스토리북 컴포넌트를 스냅샷 찍어 피그마와 비교하는 디자인시스템 검수 시스템 개발
+        - Nextjs, Typescript, Stroybook
+
+brandy:
+  title: 브랜디(서울스토어) / 2019.12 - 04 (계약)
+  info:
+    - role: 서울스토어 커머스 홈페이지 React 교체
+      # time: 2021.08 - Present
+      company: Frontend Developer
+      details: |
+        php, jquery 로 되어 있던 기존 홈페이지를 리액트로 교체하는 작업
+        - React, Typescript, Redux, Docker, ECS, ECR, Fargate
+        - 프로젝트 초기세팅 및 초기세팅 구축
+        - 아토믹디자인 패턴 도입하여 개발
+        - Redux store 데이터 정규화를 통해 컴포넌트 재사용성 증가
+        - Redux 정규화에 필요한 공통 모듈 개발
+    - role: 사내 어드민 페이지 구축
+      # time: 2021.08 - Present
+      company: Frontend Developer
+      details: |
+        프로모션 페이지 및 기타 CS 대응을 위한 어드민 페이지 구축
+        - JS => TS 마이그레이션 작업
+        - Travis => GithubAction 배포 파이프라인 마이그레이션
+        - 판매 및 상품 정보 체크 할 수 있는 차트 개발
+
+# projects:
+#   title: Projects
+#   intro: >
+#     You can list your side projects in this
+#     section. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+#     Vestibulum et ligula in nunc bibendum fringilla a eu lectus.
+#   assignments:
+#     - title: Velocity
+#       link: "#hook"
+#       tagline: "A responsive website template designed to help startups promote, market and sell their products."
+
+#     - title: DevStudio
+#       link: "#"
+#       tagline: "A responsive website template designed to help web developers/designers market their services."
+
+#     - title: Tempo
+#       link: "#"
+#       tagline: "A responsive website template designed to help startups promote their products or services and to attract users &amp; investors"
+
+#     - title: Atom
+#       link: "#"
+#       tagline: "A comprehensive website template solution for startups/developers to market their mobile apps."
+
+#     - title: Delta
+#       link: "#"
+#       tagline: "A responsive Bootstrap one page theme designed to help app developers promote their mobile apps"
+
+oss:
+  title: OSS Contributions
+  intro: >
+    오픈소스 컨트리뷰션 및 활동 내역
+  contributions:
+    - title: react-virtual
+      link: "https://github.com/TanStack/virtual/pull/518"
+      tagline: "Safari 크로스 브라우징 이슈 수정"
+
+    - title: temen
+      link: "https://fe-lib.lubycon.io/modules/Temen.html"
+      tagline: "lodash 를 대체 하기 위한 차세대 FE 유틸"
+
+    - title: quantumic-design
+      link: "https://github.com/Lubycon/quantumic-design"
+      tagline: "디자인시스템을 빠르게 구축 할 수 있도록 도와주는 UIKit"
+
+    - title: dependency-cruiser
+      link: "https://github.com/sverweij/dependency-cruiser/pull/577"
+      tagline: "공식문서 버전 업데이트 후 반영 되지 않은 부분 수정"
+
+    - title: redux-persist
+      link: "https://github.com/TanStack/virtual/pull/518"
+      tagline: "redux store 타입이 호환 되지 않아 dts 타입 수정"
+
+# publications:
+#   title: Publications
+#   intro: |
+#     You can list your publications in this section. Lorem ipsum dolor sit
+#     amet, consectetur adipiscing elit. Vestibulum et ligula in nunc
+#     bibendum fringilla a eu lectus.
+#   papers:
+#     - title: The Art of Computer Programming
+#       link: "#"
+#       authors: Donald E. Knuth
+#       conference: Addison-Wesley, 1968
+
+#     - title: "Genetic Programming III: Darwinian Invention &amp; Problem Solving"
+#       link: "#"
+#       authors: Koza, J.R., Andre, D., Bennett, F.H., Keane, M.A.
+#       conference: "Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, 1st edn. (1999)"
+
+#     - title: A syntax directed compiler for Algol 60
+#       link: "#"
+#       authors: Edgar T. Irons
+#       conference: "Comm. ACM 4 (1961), 51–55"
+
+skills:
+  title: Skills &amp; Proficiency
+
+  toolset:
+    - name: HTML, CSS, Javascript
+      level: 100%
+
+    - name: React & Next
+      level: 90%
+
+    - name: Typescript
+      level: 90%
+
+    - name: CI/CD
+      level: 60%
