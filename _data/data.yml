@@ -62,7 +62,7 @@ career-profile:
 education:
   title: Education
   info:
-    - degree: 컴퓨터공학 석사
+    - degree: 컴퓨터공학 학사
       university: 동명대학교
       time: 2014 - 2020
       # details: |
@@ -120,7 +120,7 @@ zigbang:
         - Nextjs, Typescript, Stroybook
 
 brandy:
-  title: 브랜디(서울스토어) / 2019.12 - 04 (계약)
+  title: 브랜디(서울스토어) / 2019.12 - 2021.04
   info:
     - role: 서울스토어 커머스 홈페이지 React 교체
       # time: 2021.08 - Present
