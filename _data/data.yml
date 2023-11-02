@@ -78,37 +78,102 @@ education:
 experiences:
   title: 마이리얼트립 / 2021.08 - Present
   info:
+    - role: Staynet
+      time: 2023.07 - 2023.10
+      projects:
+        - subTitle: 기술스택
+          details: React18, Typescript, Redux, react-query, AntDesign, Webpack, Jenkins
+        - subTitle: 프로젝트소개
+          details: 연동사에서 제공하고 있는 상품등록 서비스를 계약을 종료하고, 직접 계약한 상품을 내부에서 상품등록할 수 있도록 하는 서비스입니다. 상품의 다양한 정보를 입력 받고 있기 때문에 입력 폼이 많은 페이지가 체이닝 형태로 이루어져 있고 복잡한 UI를 가집니다.
+        - subTitle: 기여 내용
+          details: |
+            - 데브환경에서 발생하는 메모리 누수 수정
+            - 입력 폼 렌더링 최적화
+            - 캘린더(테이블) 형태의 UI 폼 렌더링 최적화
+        - subTitle: 트러블 슈팅
+          details: |
+            - 최초 캘린더(테이블)은 수정 가능한 UI가 아니었기에 table 태그로개발 되었으나 셀 마다 input 추가 되는 요구사항이 발생하여 렌더링 비용 대폭 증가
+              - 캘린더 전체가 렌더링 되는 것을 막기 위해 div 태그로 캘린더 리팩토링하여 row 단위로 렌더링 되도록 수정
+              - React.memo 를 활용해 캘린더 외에 UI가 업데이트 됐을 때 렌더링 되지 않도록 수정
+            - 복잡한 입력폼을 상태로 관리하면 렌더링 비용이 비싸지는 문제 발생
+              - ContextAPI와 Ref 를 활용해 uncontrolled 컴포넌트 값들을 Submit 이벤트에 한번에 받을 수 있도록 개발
+            - HMR 을 사용하면 로컬머신에서 메모리 누수 문제 발생
+              -	HMR을 제거하면 메모리릭이 발생하지 않았기 때문에 빌드할 때 메모리 누수가 발생하고 있다고 추론하여 힙메모리를 촬영해 확인해보니 번들 파일이 매번 생성되고 있었고, 원인은 운영 환경에 사용중인 캐시미스 정책을 위한 hash 옵션이 데브에서 동작하고 있었기 때문이었고, 개발 환경에서는 해당 옵션을 제거를 통해 문제 해결
+        - subTitle: 성과 및 회고
+          details: 주기적으로 발생하는 연동사 구독비용을 제거했고, 서비스에 핏한 상품 정보를 받고, 파트너의 요구사항 반영이 가능하게 되어 상품 퀄리티가 증가하여 상품 탐색경험 및 CVR 이 증가 했습니다.
+      # subTitle: 프로젝트소개
+
     - role: 통합숙소
-      # time: 2021.08 - Present
+      time: 2022.11 - 2023.05
       company: Frontend Developer
-      details: |
-        국내외 숙소 도메인을 통합하는 작업을 개발 했으며, 총 2명의 FE 개발자로 
-        프로젝트 진행에 키를 잡고 정책 검토부터 소통까지 맡아 진행. <b>작업 대비 일 GMV 3000만 => 7000만 상승</b>
+      projects:
+        - subTitle: 기술스택
+          details: Next13, Typescript, react-query, Turbo, SWC, Sentry, Jenkins, Docker, AWS ECR, ECS, EC2, Lighthouse, GithubActions
+        - subTitle: 프로젝트소개
+          details: 마이리얼트립 내에 흩어진 상품들을 하나의 플랫폼에서 판매하기 위한 통합 프로젝트입니다. 마이리얼트립 내에서 MSA 로 새로 개발 된 앱이며 서브도메인을 가지는 형태로 호스팅 되었습니다. <br/> 프로젝트 메인테이너로 고도화 및 배포, QA 일정 등을 담당하고 있습니다.
 
-        - Nextjs, react-query, typescript, jenkins, docker, EC2, ECR
-        - 디자인시스템 개편 작업과 동시에 진행하며 모놀로틱한 컴포넌트 형태로 개발
-        - 로컬스토리지와 상태(state) 동기화 모듈 및 URL 쿼리 상태 동기화 모듈 개발
-        - 타입스크립트 원본 모델과 타입 레이어를 분리한 타입 체이닝 디자인 도입
-        - CSR => SSR 인증 방식 변경 
-        - @tanstack/table 크로스브라우징 관련 트러블슈팅 오픈소스 기여
+        - subTitle: 기여 내용
+          details: |
+            - 홈, 목록, 상세 페이지 중에 상품목록 페이지를 맡아 개발. 
+            - react-query 캐시 및 캐시미스 컨벤션을 정의
+            - 각 서버별로 인스턴스를 생성 할 수 있는 axios 추상화 및 프로젝트 초기세팅
+            - 쿼리스트링과 UI 상태 싱크를 맞추기 위한 커스텀 훅 개발
+            - 사용자와 상호작용이 많은 페이지였기에 주의가 필요한 컴포넌트들은 웹접근성을 고려하며 개발
+            - 1명의 신입 개발자를 리딩하며 개발 했으며, 코드리뷰 및 전반적인 일정 검토 및 트러블 슈팅 담당
+            - PR이 생성되면 Lighthouse 를 통해 퍼포먼스 수치를 모니터링 할 수 있는 GithubAction 추가
+        - subTitle: 트러블 슈팅
+          details: |
+            - Localstorage 를 state 로 관리하기 위한 훅을 사용하면 렌더링이 2번씩 되는 문제가 발생
+              - useEffect의 디펜던시로 storage 값을 watch 하여 setter 가 동작하면서 2번 렌더링이 발생하여 커스텀이벤트를 통해 이벤트리스너 기반으로 커스텀 훅을 개발하여 문제 해결
+            - @tanstack/react-virtual 라이브러리를 사용하여 virtual scroll 을 구현 하였고, 사파리에서 크로스 브라우징 문제 발생
+              -	사파리에서 특정 프로퍼티를 제공하지 않아 발생하는 문제였고, 라이브러리에 해당 코드가 대응되어 있지 않아 수정 PR을 통해 문제 해결
+        - subTitle: 성과 및 회고
+          details:
 
-    - role: 연동사 직계약 어드민 페이지 개발
-      # time: 2014 - 2015
+    - role: 마이리얼트립 디자인시스템
+      time: 2022.08 - 2023.11
       company: Frontend Developer
-      details: |
-        직계약 상품들을 등록 할 수 있는 어드민 페이지 구축, 총 2명의 FE 개발자로 진행 되었음.
-          - React, react-query, redux, typescript
-          - 정책 변경을 고려한 아토믹한 uncontrolled, controlled 컴포넌트 선행 개발
-          - 높은 렌더링 비용이 발생하는 페이지 최적화 작업
-    - role: DX 개선 작업
-      # time: 2012 - 2014
+      projects:
+        - subTitle: 기술스택
+          details: React, Typescript, Emotion, framer-motion, storybook, yarn berry
+        - subTitle: 프로젝트소개
+          details: 통합숙소 프로젝트에서 사용 될 디자인시스템이 통합숙소와 병행으로 개발 되었습니다. 해당 시기에 마이리얼트립의 리브랜딩이 예고 되어 있었고 그레 맞춰 새로운 디자인시스템이 구현되었습니다.
+        - subTitle: 기여 내용
+          details: |
+            - 신입 개발자 1명과 함께 페어로 작업하며 다양한 트러블슈팅
+            - 주로 웹뷰에서 사용되는 네이티브 컴포넌트 구현을 담당
+            - 디자인시스템 배포 학습 허들을 최대한 낮추기 위해 커밋 기반으로 버전이 자동으로 범핑 되어 배포 되도록 개발
+            - 복잡한 네이티브 컴포넌트 구현을 담당했습니다.
+              -	바텀시트
+              -	iOS DatePicker
+
+        - subTitle: 트러블 슈팅
+          details: |
+            - Scroll prevent 동작이 포함 되어 있는 컴포넌트가 특정 기기에서 동작하지 않는 문제 발생
+              -	아이패드 OS 13 에서 기기 정보가 Mac 으로 노출 되는 문제가 있어 touch point 로 기기 구분 하도록 변경
+            - 새로운 디자인시스템에서 브레이킹 체인지 된 부분이 동료 개발자들에게 종종 워닝을 발생 시키는 문제(vaildateDOMNesting)
+              -	ContextAPI 를 활용해 상호작용 가능한 컴포넌트의 자식으로 상호작용 가능한 컴포넌트가 왔을 때 에러를 발생시키는 패턴 도입
+              -	https://www.zigae.com/react-nested-components/
+
+        - subTitle: 성과 및 회고
+          details:
+
+    - role: TF / Frontend libs, frontend atlantis, DX Script
+      time: 2021.12 - 2022.10
       company: Frontend Developer
-      details: |
-        팀 내 개발자 경험 향상을 위해 자동화 가능한 영역 자동화를 진행해 개발자 경험을 높이는 작업
-          - 신규 입사자를 위한 개발 환경 세팅 스크립트 작성
-          - 로컬머신에서 환경변수가 항상 최신 상태를 유지하도록 빌드 스크립트 수정
-          - 디자인 시스템 카나리 배포 및 시멘틱 버저닝 환경 구축
-          - 깃헙 이벤트를 슬랙으로 받아 보기 위한 커스텀 깃헙액션 개발 [Marketplace](https://github.com/marketplace/actions/myrealtrip-slack-notify)
+      projects:
+        - subTitle: 기술스택
+          details: Typescript, React17-18, react-query, redux, actions
+        - subTitle: 프로젝트 소개 및 기여
+          details: |
+            - Frontend libs: FE 에서 관리하는 레포가 늘어남에 따라 공통 모듈을 관리할 모노레포 환경 세팅
+            - Setup script: 신규입사자 개발환경 세팅에 난항이 있어 쉘스크립트를 활용해 개발환경 셋업
+            - Build script: 로컬머신에서 환경변수가 항상 최신 상태를 유지하도록 빌드스크립트 수정
+            - 깃헙 이벤트를 슬랙으로 받아보기 위한 커스텀 깃헙 액션 개발 [Marketplace](https://github.com/marketplace/actions/myrealtrip-slack-notify)
+        - subTitle: 트러블 슈팅
+          details: |
+            - Frontend libs 린트 및 테스트 코드 검사 시간이 오래 걸리는 문제가 발생
+              -	Barrel 파일이 Barrel 을 참조하게 되면서 러너가 파일 마다 생성 되어 오래 걸려 Barrel 파일을 제거 하였습니다
 
 zigbang:
   title: 직방 / 2021.05 - 07 (계약)
@@ -116,31 +181,42 @@ zigbang:
     - role: 디자인 검수 시스템
       # time: 2021.08 - Present
       company: Frontend Developer
-      details: |
-        개발 단계의 스토리북 컴포넌트를 스냅샷 찍어 피그마와 비교하는 디자인시스템 검수 시스템 개발
-        - Nextjs, Typescript, Stroybook
+      projects:
+        - subTitle: 기술스택
+          details: Nextjs, Typescript, Stroybook
+        - subTitle: 프로젝트 소개 및 기여
+          details: 개발 단계의 스토리북 컴포넌트를 스냅샷 찍어 피그마와 비교하는 디자인시스템 검수 시스템 개발
 
 brandy:
   title: 브랜디(서울스토어) / 2019.12 - 2021.04
   info:
-    - role: 서울스토어 커머스 홈페이지 React 교체
-      # time: 2021.08 - Present
-      company: Frontend Developer
-      details: |
-        php, jquery 로 되어 있던 기존 홈페이지를 리액트로 교체하는 작업
-        - React, Typescript, Redux, Docker, ECS, ECR, Fargate
-        - 프로젝트 초기세팅 및 초기세팅 구축
-        - 아토믹디자인 패턴 도입하여 개발
-        - Redux store 데이터 정규화를 통해 컴포넌트 재사용성 증가
-        - Redux 정규화에 필요한 공통 모듈 개발
-    - role: 사내 어드민 페이지 구축
-      # time: 2021.08 - Present
-      company: Frontend Developer
-      details: |
-        프로모션 페이지 및 기타 CS 대응을 위한 어드민 페이지 구축
-        - JS => TS 마이그레이션 작업
-        - Travis => GithubAction 배포 파이프라인 마이그레이션
-        - 판매 및 상품 정보 체크 할 수 있는 차트 개발
+    - role: 서울스토어 Next 교체
+      projects:
+        - subTitle: 기술스택
+          details: Nextjs, Typescript, Redux, Docker, ECS, ECR, Fargate
+        - subTitle: 프로젝트 소개
+          details: php, jquery 로 되어 있던 기존 홈페이지를 리액트로 교체하는 작업
+        - subTitle: 기여 내용
+          details: |
+            - PG 결제 연동
+            - 아토믹 디자인 패턴 활용
+            - 데이터 정규화를 통한 Redux store 관리
+            - AWS 인프라 구축
+        - subTitle: 트러블 슈팅
+          details: |
+            - redux-persist에서 store 타입이 제대로 작성 되지 않아 타입스크립트에서 타입에러 발생
+              - redux-persit d.ts 파일 수정 PR 작성
+
+    - role: 사내 어드민 페이지
+      projects:
+        - subTitle: 기술스택
+          details: React, Javascript, Typescript, Redux
+        - subTitle: 프로젝트 소개
+          details: 고객 CS 대응을 위한 어드민 페이지
+        - subTitle: 기여 내용
+          details: |
+            - Javascript 에서 Typescript 로 마이그레이션
+            - 요구사항 개발 및 마크업
 
 # projects:
 #   title: Projects
