@@ -152,7 +152,7 @@ experiences:
           details: |
             - Scroll prevent 동작이 포함되어 있는 컴포넌트가 특정 기기에서 동작하지 않는 문제 발생
               -	아이패드 OS 13에서 기기 정보가 Mac 으로 노출 되는 문제가 있어 touch point 로 기기 구분하도록 변경
-            - 새로운 디자인시스템에서 브레이킹 체인지 된 부분이 동료 개발자들에게 종종 워닝을 발생시키는 문제(vaildateDOMNesting)
+            - 새로운 디자인시스템에서 브레이킹 체인지 된 부분이 동료 개발자들에게 워닝을 발생시키는 문제(vaildateDOMNesting)
               -	ContextAPI를 활용해 상호작용 가능한 컴포넌트의 자식으로 상호작용 가능한 컴포넌트가 왔을 때 에러를 발생시키는 패턴 도입
               -	[https://www.zigae.com/react-nested-components/](https://www.zigae.com/react-nested-components/)
 
@@ -195,7 +195,7 @@ experiences:
               - Barrel 파일을 제거하여 Jest 및 Lint 검사 <b>속도 50% 이상 개선</b>
 
 zigbang:
-  title: 직방 / 2021.05 - 07 (계약)
+  title: 직방 / 2021.05 - 07
   info:
     - role: 디자인 검수 시스템
       # company: 2021.08 - Present
@@ -206,12 +206,12 @@ zigbang:
           details: 개발 단계의 스토리북 컴포넌트를 스냅샷 찍어 피그마와 비교하는 디자인시스템 검수 시스템 개발
 
 brandy:
-  title: 브랜디(서울스토어) / 2019.12 - 2021.04
+  title: 브랜디(서울스토어) / 2019.12 - 2021.03
   info:
     - role: 서울스토어 Next 교체
       projects:
         - subTitle: 기술스택
-          details: Nextjs, Typescript, Redux, Docker, ECS, ECR, Fargate
+          details: Next11, Typescript, Redux, Docker, ECS, ECR, Fargate
         - subTitle: 프로젝트 소개
           details: php, jquery 로 되어 있던 기존 홈페이지를 리액트로 교체하는 작업
         - subTitle: 기여 내용
