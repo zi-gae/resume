@@ -124,8 +124,8 @@ experiences:
             - PR이 생성되면 Lighthouse 를 통해 퍼포먼스 수치를 모니터링 할 수 있는 GithubAction 추가
         - subTitle: 트러블 슈팅
           details: |
-            - Localstorage 를 state 로 관리하기 위한 훅을 사용하면 렌더링이 2번씩 되는 문제가 발생
-              - useEffect의 디펜던시로 storage 값을 watch 하여 setter 가 동작하면서 2번 렌더링이 발생하여 커스텀이벤트를 통해 이벤트리스너 기반으로 커스텀 훅을 개발하여 불필요한 렌더링 문제 해결
+            - Localstorage 를 state 로 관리하기 위한 훅을 사용하던 중, UI 싱크가 맞지 않는 문제 발생
+              - 다른 탭이나 윈도우에서의 로컬 스토리지 변경을 감지하지 못하는 문제가 발생하여 커스텀 이벤트 기반으로 훅을 리팩토링 하여 LocalStorage 변화를 UI에서 감지할 수 있도록 리팩토링
             - @tanstack/react-virtual 라이브러리를 사용하여 virtual scroll 을 구현하였고, 사파리에서 크로스 브라우징 문제 발생
               -	사파리에서 특정 프로퍼티를 제공하지 않아 발생하는 문제였고, 라이브러리에 해당 코드가 대응되어 있지 않아 수정 PR을 통해 문제 해결
               - [https://github.com/TanStack/virtual/pull/518](https://github.com/TanStack/virtual/pull/518)
