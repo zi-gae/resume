@@ -9,10 +9,14 @@
     </span>
     {{ career-profile.title }}
   </h2>
-
-  <div class="summary">
-    {{ career-profile.summary | markdownify }}
-  </div><!--//summary-->
-    
+      <div class="skillset">
+      
+        {% for skill in career-profile.toolset %}
+        <div class="item">
+      
+          <h3 class="level-title">{{ skill.name }}</h3>
+        </div><!--//item-->
+        {% endfor %}
+      </div>
 </section><!--//section-->
 {% endif %}

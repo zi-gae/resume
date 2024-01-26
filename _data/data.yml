@@ -55,11 +55,12 @@ sidebar:
 
 career-profile:
   title: Introduce
-  summary: |
-    - 프론트엔드 개발자 2019.12 ~ present
-    - 그룹 조직 보다는 팀 조직 위해 발전합니다.
-    - 개발로 시작해 개발로 끝나는 하루를 즐깁니다.
-    - 집 보다 코드가 깨끗한 개발자입니다.
+  toolset:
+    - name: 프론트엔드 개발자 2019.12 ~ present
+    - name: 그룹 조직 보다는 팀 조직 위해 발전합니다.
+    - name: 개발로 시작해 개발로 끝나는 하루를 즐깁니다.
+    - name: 집 보다 코드가 깨끗한 개발자입니다.
+
 education:
   title: Education
   info:
@@ -74,6 +75,22 @@ education:
       #   pretium quis, sem.
       #     - Bullet point
       #     - Bullet point
+
+skills:
+  title: Skills &amp; Proficiency
+
+  toolset:
+    - name: HTML, CSS, Javascript
+
+    - name: React & Next
+
+    - name: Typescript
+
+    - name: Node, Python
+
+    - name: Sentry, Github Actions, Jenkins
+
+    - name: AWS ECR, RCS, Fargate
 
 experiences:
   title: 마이리얼트립 / 2021.08 - Present
@@ -310,18 +327,3 @@ brandy:
 #       authors: Edgar T. Irons
 #       conference: "Comm. ACM 4 (1961), 51–55"
 
-# skills:
-#   title: Skills &amp; Proficiency
-
-#   toolset:
-#     - name: HTML, CSS, Javascript
-#       level: 100%
-
-#     - name: React & Next
-#       level: 90%
-
-#     - name: Typescript
-#       level: 90%
-
-#     - name: CI/CD
-#       level: 60%
