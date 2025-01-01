@@ -127,7 +127,7 @@ ignite:
               - 성공적인 테스트 결과에 따라 Docker 이미지를 빌드하고 레지스트리에 푸시
               - 스테이징 및 프로덕션 환경으로 자동 배포되도록 단계적 파이프라인 설계
 
-    - role: 인증 중고차
+    - role: 기아 인증 중고차
       projects:
         - subTitle: 기술스택
           details: next, ts, jenkins 기반 기술스택
