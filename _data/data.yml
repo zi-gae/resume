@@ -1,17 +1,10 @@
-#
-# Be aware that even a small syntax error here can lead to failures in output.
-#
-
 sidebar:
   position: right # position of the sidebar : left or right
   education: True # set to False if you want education in main section instead of in sidebar
-
-  # Profile information
   name: 정건우
   tagline: Frontend Developrt
   avatar: geonwoo.jpg #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
-  # Sidebar links
   email: doscmdev@gmail.com
   phone: 010-4808-5382
   # timezone: America/Cancun Timezone
@@ -28,30 +21,6 @@ sidebar:
   # codewars:
   # goodreads: # Number-Username, e.g. 123456-alandoe
   # pdf: http://www.africau.edu/images/default/sample.pdf
-
-  # languages:
-  #   title: Languages
-  #   info:
-  #     - idiom: English
-  #       level: Native
-
-  #     - idiom: French
-  #       level: Professional
-
-  #     - idiom: Spanish
-  #       level: Professional
-
-  # interests:
-  #   title: Interests
-  #   info:
-  #     - item: Climbing
-  #       link:
-
-  #     - item: Snowboarding
-  #       link:
-
-  #     - item: Cooking
-  #       link:
 
 career-profile:
   title: Introduce
@@ -146,78 +115,70 @@ experiences:
       projects:
         - subTitle: 기술스택
           details: React18, Typescript, Redux, react-query, AntDesign, Webpack, Jenkins
-        - subTitle: 프로젝트소개
-          details: 연동사의 서비스를 독립 서비스로 대체하여, 직접 계약한 상품을 내부에서 상품 등록할 수 있도록 하는 서비스입니다. 상품의 다양한 정보를 입력받고 있기 때문에 입력 폼이 많은 페이지가 체이닝 형태로 이루어져 있고 복잡한 UI를 가집니다.
+        - subTitle: 프로젝트 소개
+          details: 연동사의 서비스를 독립적인 서비스로 전환하여, 자사 계약 상품을 내부에서 직접 등록할 수 있도록 하는 플랫폼, 복잡한 입력 항목으로 구성된 체이닝 형태의 폼 UI
         - subTitle: 기여 내용
           details: |
-            - 데브환경에서 발생하는 메모리 누수 수정
-            - 입력 폼 렌더링 최적화
-            - 캘린더(테이블) 형태의 UI 폼 렌더링 최적화
-        - subTitle: 트러블 슈팅
+            - 개발 환경에서 발생하던 메모리 누수 이슈 해결
+            - 입력 폼 및 복잡한 테이블 기반 UI 렌더링 최적화
+            - 성능 병목 구간 파악 후 캘린더 컴포넌트 리팩토링
+        - subTitle: 트러블슈팅
           details: |
-            - 초기 수정 불가능한 UI로 캘린더를 table 태그로 구현하였으나, 각 셀에 input을 추가해야 하는 요구사항 변경으로 인해 렌더링 비용이 크게 증가
-              - 캘린더 전체가 렌더링 되는 것을 막기 위해 div 태그로 캘린더 리팩토링하여 row 단위로 렌더링 되도록 수정
-              - React.memo 를 활용해 캘린더 외에 UI가 업데이트됐을 때 렌더링 되지 않도록 수정
-            - 복잡한 입력폼의 상태 관리로 인해 렌더링 비용이 상승하는 문제
-              - ContextAPI와 Ref 를 활용해 uncontrolled 컴포넌트 값들을 Submit 이벤트에 한번에 받을 수 있도록 개발
-            - HMR 을 사용하면 로컬머신에서 메모리 누수 문제 발생
-              -	HMR을 비활성화했을 때 메모리 누수가 발생하지 않는 것을 확인 후, 빌드 과정에서 메모리 누수 이슈가 있음을 추리
-              - 힙 메모리 스냅샷 결과, 번들 파일이 지속적으로 생성되는 것을 확인하였고, 이는 운영 환경에서의 캐시 미스 정책을 위한 hash 옵션이 개발 환경에서도 활성화되어 있음을 파악
-              - 해당 옵션을 개발 환경에서 제거함으로써 문제 해결
+            - 초기에는 table 태그 기반 캘린더 UI 구조로 인해, 각 셀에 input 삽입 시 전체 렌더링 비용 급증
+              - 구조를 div 태그 기반으로 변경하고 row 단위로 분리하여 성능 개선
+              - React.memo 적용으로 불필요한 렌더링 방지
+            - 입력 폼의 상태가 많고 복잡하여 렌더링 최적화가 필요함
+              - ContextAPI와 Ref 조합으로 uncontrolled 방식 도입, submit 시 일괄 상태 수집
+            - HMR 사용 시 메모리 누수 발생
+              - HMR을 비활성화했을 때 문제가 사라지는 점을 바탕으로 원인을 탐색
+              - 힙 스냅샷 분석을 통해 개발 환경에서의 hash 옵션이 번들 누적 생성 원인임을 파악
+              - 개발 환경에서 해당 옵션 제거하여 메모리 누수 해결
         - subTitle: 성과 및 회고
-          details: 연동사의 주기적인 구독비용을 절감하였고, 상세한 상품 정보 제공이 가능해져 상품의 퀄리티를 향상시켰습니다. 이러한 결과로 상품 탐색 경험이 개선되어 <b>CVR이 약 5% 증가</b>하였습니다.
-      # subTitle: 프로젝트소개
+          details: 연동사의 월 구독 비용을 절감하고, 상품 정보의 질을 개선하여 <b>전환율(CVR)이 약 5% 상승</b>하는 성과를 달성
 
     - role: 통합숙소
       company: 2022.11 - 2023.05
       projects:
         - subTitle: 기술스택
           details: Next13, Typescript, react-query, Turbo, SWC, Sentry, Jenkins, Docker, AWS ECR, ECS, EC2, Lighthouse, GithubActions
-        - subTitle: 프로젝트소개
-          details: 마이리얼트립의 다양한 상품들을 통합하여 하나의 플랫폼에서 제공하기 위한 프로젝트를 주도하였습니다. MSA 구조로 새롭게 구축된 애플리케이션은 서브도메인을 통해 호스팅 되었습니다. <br/> 프로젝트의 메인테이너로써, 애플리케이션의 고도화, 배포, QA 일정 관리 등 전반적인 프로젝트 진행을 책임지고 있습니다.
-
+        - subTitle: 프로젝트 소개
+          details: 마이리얼트립의 숙소, 투어, 렌터카 등 다양한 상품을 통합한 플랫폼을 구축 및 MSA 기반으로 새롭게 구성하고, 서브도메인 구조를 통해 모듈화된 서비스를 제공합니다. 전체 프로젝트의 메인테이너 역할을 수행
         - subTitle: 기여 내용
           details: |
-            - 홈, 목록, 상세 페이지 중에 상품목록 페이지를 맡아 개발. 
-            - react-query 캐시 및 캐시미스 컨벤션을 정의
-            - 각 서버별로 인스턴스를 생성할 수 있는 axios 추상화 및 프로젝트 초기세팅
-            - 쿼리스트링과 UI 상태 싱크를 맞추기 위한 커스텀 훅 개발
-            - 사용자와 상호작용이 많은 페이지였기에 주의가 필요한 컴포넌트들은 웹접근성을 고려하며 개발
-            - 1명의 신입 개발자를 리딩 하며 개발했으며, 코드 리뷰 및 전반적인 일정 검토 및 트러블 슈팅 담당
-            - PR이 생성되면 Lighthouse 를 통해 퍼포먼스 수치를 모니터링 할 수 있는 GithubAction 추가
-        - subTitle: 트러블 슈팅
+            - 상품 목록 페이지 개발 및 최적화 전반 담당
+            - react-query 기반 캐싱 및 캐시 미스 전략 수립
+            - 쿼리스트링과 UI 상태 싱크를 위한 커스텀 훅 개발
+            - 신입 개발자 1명을 리딩하며 일정 관리 및 코드 품질 검토
+            - PR 시 Lighthouse 기반 성능 모니터링 자동화(Github Actions)
+        - subTitle: 트러블슈팅
           details: |
-            - Localstorage 를 state 로 관리하기 위한 훅을 사용하던 중, UI 싱크가 맞지 않는 문제 발생
-              - 다른 탭이나 윈도우에서의 로컬 스토리지 변경을 감지하지 못하는 문제가 발생하여 커스텀 이벤트 기반으로 훅을 리팩토링 하여 LocalStorage 변화를 UI에서 감지할 수 있도록 리팩토링
-            - @tanstack/react-virtual 라이브러리를 사용하여 virtual scroll 을 구현하였고, 사파리에서 크로스 브라우징 문제 발생
-              -	사파리에서 특정 프로퍼티를 제공하지 않아 발생하는 문제였고, 라이브러리에 해당 코드가 대응되어 있지 않아 수정 PR을 통해 문제 해결
+            - 로컬스토리지를 상태로 사용하던 기존 훅이 UI와 동기화되지 않는 문제 발생
+              - 탭/창 간 동기화를 위한 커스텀 이벤트 기반 훅으로 리팩토링
+            - @tanstack/react-virtual 사용 시 Safari 브라우저에서 크로스 브라우징 이슈 발생
+              - Safari가 지원하지 않는 프로퍼티 사용으로 인해 발생한 것으로, 라이브러리에 직접 PR 제출하여 문제 해결
               - [https://github.com/TanStack/virtual/pull/518](https://github.com/TanStack/virtual/pull/518)
         - subTitle: 성과 및 회고
-          details: 숙소 도메인의 <b>GMV가 7000만</b> 원 증가하는 성과를 얻었습니다. 또한, 서버 사이드 개발 과정에서 다양한 사이드 이펙트에 대한 경험을 축적할 수 있었습니다.
+          details: 숙소 상품의 <b>GMV가 약 7000만 원 증가</b>하는 결과를 도출
 
     - role: 마이리얼트립 디자인시스템
       company: 2022.08 - 2023.11
       projects:
         - subTitle: 기술스택
           details: React, Typescript, Emotion, framer-motion, storybook, yarn berry
-        - subTitle: 프로젝트소개
-          details: 마이리얼트립의 리브랜딩 계획에 맞춰 통합숙소 프로젝트와 병행해 새 디자인 시스템을 개발하였습니다. 이로 인해 일관된 브랜드 이미지와 통일감 있는 UI/UX를 사용자에게 제공하게 되었습니다.
+        - subTitle: 프로젝트 소개
+          details: 마이리얼트립 리브랜딩에 맞춰 디자인 시스템을 새롭게 구축 및 통합숙소 프로젝트와 병행하며 일관된 UI/UX 제공을 목표
         - subTitle: 기여 내용
           details: |
-            - 신입 개발자 1명과 함께 페어로 작업하며 다양한 트러블슈팅
-            - 주로 웹뷰에서 사용되는 네이티브 컴포넌트 구현을 담당
-            - 디자인시스템 배포 학습 허들을 최대한 낮추기 위해 커밋 기반으로 버전이 자동으로 범핑 되어 배포 되도록 개발
-            - 복잡한 네이티브 컴포넌트 구현을 담당했습니다.
-              -	바텀시트
-              -	iOS DatePicker
-
-        - subTitle: 트러블 슈팅
+            - 신입 개발자와 페어 프로그래밍을 통해 컴포넌트 구현 및 QA 대응
+            - 웹뷰 중심 네이티브 컴포넌트(바텀시트, iOS DatePicker) 개발 담당
+            - 커밋 기반 자동 버전 범핑 및 배포 프로세스 구현
+        - subTitle: 트러블슈팅
           details: |
-            - Scroll prevent 동작이 포함되어 있는 컴포넌트가 특정 기기에서 동작하지 않는 문제 발생
-              -	아이패드 OS 13에서 기기 정보가 Mac 으로 노출 되는 문제가 있어 touch point 로 기기 구분하도록 변경
-            - 새로운 디자인시스템에서 브레이킹 체인지 된 부분이 동료 개발자들에게 워닝을 발생시키는 문제(vaildateDOMNesting)
-              -	ContextAPI를 활용해 상호작용 가능한 컴포넌트의 자식으로 상호작용 가능한 컴포넌트가 왔을 때 에러를 발생시키는 패턴 도입
-              -	[https://www.zigae.com/react-nested-components/](https://www.zigae.com/react-nested-components/)
+            - Scroll prevent 기능이 일부 기기(iPad OS 13)에서 작동하지 않음
+              - 해당 OS가 Mac으로 인식되는 문제를 touch point 기반으로 구분해 해결
+            - 상호작용 컴포넌트 중첩 시 validateDOMNesting 에러 발생
+              - ContextAPI를 활용해 구조적인 제한을 두는 방식으로 에러를 미연에 방지
+              - [https://www.zigae.com/react-nested-components/](https://www.zigae.com/react-nested-components/)
 
     - role: 렌터카 및 국내숙소 고도화
       company: 2021.10 - 2022.07
@@ -225,20 +186,20 @@ experiences:
         - subTitle: 기술스택
           details: Typescript, React17-18, react-query, redux
         - subTitle: 프로젝트 소개
-          details: 마이리얼트립 내에 있는 국내 숙소와 렌터카 판매 플랫폼입니다. 개발된 지 오래되어 관리자가 부재인 도메인에 투입되어 관리한 프로젝트입니다.
-        - subTitle: 프로젝트 기여
+          details: 관리자가 부재한 상태였던 마이리얼트립의 숙소 및 렌터카 도메인 유지보수 및 고도화 프로젝트
+        - subTitle: 기여 내용
           details: |
-            - 레거시 코드 분석 및 고도화
-            - 모바일, 데스크탑으로 분리된 컴포넌트의 공통 로직 병합
-            - JS로 기기 분기하여 마크업 된 부분 미디어쿼리로 변경
-            - 에러 및 대체 UI Suspense 및 ErrorBoundary 로 리팩토링
-            - 타입스크립트 타입 체이닝이 이루어질 수 있도록 수정
-        - subTitle: 트러블 슈팅
+            - 레거시 코드 전면 분석 및 최적화 리팩토링
+            - 모바일/데스크탑 분리 컴포넌트의 공통화 작업
+            - JS 기반 디바이스 분기 → 미디어쿼리 기반으로 구조 정리
+            - Suspense 및 ErrorBoundary 기반 에러 핸들링 구조 도입
+            - 타입스크립트 타입 안정성 확보 위한 체이닝 리팩토링
+        - subTitle: 트러블슈팅
           details: |
-            - 무분별한 전역상태와 useEffect 사용으로 렌더링 비용 낭비 및 디버깅 어려움 발생
-              - 전역상태로 관리될 상태가 없다 판단하고 redux 제거 및 리팩토링
-            - Localstorage 의 자료구조가 바뀌게 되어 기존에 저장된 Localstorage 로 인한 문제 발생
-              - Localstorage 버저닝이 가능한 모듈으로 추상화
+            - 과도한 전역 상태 관리 및 useEffect 남용으로 디버깅 어려움
+              - 상태 구조 단순화 후 redux 제거 및 hooks 기반으로 구조 재정비
+            - Localstorage 구조 변경으로 기존 저장값과 충돌 발생
+              - 버저닝 가능한 LocalStorage 모듈을 도입해 구조 유연화
 
     - role: TF / Frontend libs, DX Script
       company: 2021.12 - 2022.10
@@ -247,20 +208,20 @@ experiences:
           details: Typescript, React17-18, react-query, redux, actions
         - subTitle: 프로젝트 소개 및 기여
           details: |
-            - <b>Frontend libs</b>: FE에서 관리하는 레포가 늘어남에 따라 공통 모듈을 관리할 모노레포 환경 세팅
-            - <b>Setup script</b>: 신규 입사자 개발 환경 세팅에 난항이 있어 쉘 스크립트를 활용해 개발 환경 셋업
-            - <b>Build script</b>: 로컬 머신에서 환경 변수가 항상 최신 상태를 유지하도록 빌드 스크립트 수정
-            - <b>Actions</b>: 깃허브 이벤트를 슬랙으로 받아보기 위한 커스텀 깃헙 액션 개발 [Marketplace](https://github.com/marketplace/actions/myrealtrip-slack-notify)
-        - subTitle: 트러블 슈팅
+            - <b>Frontend libs</b>: 공통 모듈 관리를 위해 FE 전용 모노레포 환경 구축
+            - <b>Setup script</b>: 신규 입사자들의 빠른 온보딩을 위한 셋업 스크립트 제공
+            - <b>Build script</b>: 환경 변수 최신 상태 유지 위한 로컬 빌드 스크립트 개선
+            - <b>Actions</b>: 깃허브 이벤트 → 슬랙 알림을 위한 커스텀 액션 개발 및 배포 [Marketplace](https://github.com/marketplace/actions/myrealtrip-slack-notify)
+        - subTitle: 트러블슈팅
           details: |
-            - Frontend libs 린트 및 테스트 코드 검사 시간이 오래 걸리는 문제가 발생
-              -	Barrel 파일이 또 다른 Barrel 파일을 참조하게 되면서 러너가 파일 마다 생성되는 것을 확인
-              - Barrel 파일을 제거하여 Jest 및 Lint 검사 <b>속도 50% 이상 개선</b>
+            - 공통 모듈 테스트 시 Lint 및 Jest 검사 시간이 과도하게 소요되는 문제
+              - Barrel 파일 간 상호 참조로 러너 인스턴스가 무한 생성되는 현상 발견
+              - Barrel 파일 제거로 빌드 및 테스트 시간 <b>50% 이상 단축</b>
 
 brandy:
-  title: 브랜디(서울스토어) / 2019.12 - 2021.04
+  title: 브랜디 / 2019.12 - 2021.03
   info:
-    - role: 서울스토어 Next 교체
+    - role: Next 교체
       projects:
         - subTitle: 기술스택
           details: Next11, Typescript, Redux, Docker, ECS, ECR, Fargate
@@ -277,88 +238,3 @@ brandy:
             - redux-persist에서 store 타입이 제대로 작성 되지 않아 타입스크립트에서 타입에러 발생
               - redux-persit d.ts 파일 수정 PR 작성
               - [https://github.com/rt2zz/redux-persist/pull/1278](https://github.com/rt2zz/redux-persist/pull/1278)
-
-    - role: 사내 어드민 페이지
-      projects:
-        - subTitle: 기술스택
-          details: React, Javascript, Typescript, Redux
-        - subTitle: 프로젝트 소개
-          details: 고객 CS 대응을 위한 어드민 페이지
-        - subTitle: 기여 내용
-          details: |
-            - Javascript 에서 Typescript 로 마이그레이션
-            - 요구사항 개발 및 마크업
-
-# projects:
-#   title: Projects
-#   intro: >
-#     You can list your side projects in this
-#     section. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-#     Vestibulum et ligula in nunc bibendum fringilla a eu lectus.
-#   assignments:
-#     - title: Velocity
-#       link: "#hook"
-#       tagline: "A responsive website template designed to help startups promote, market and sell their products."
-
-#     - title: DevStudio
-#       link: "#"
-#       tagline: "A responsive website template designed to help web developers/designers market their services."
-
-#     - title: Tempo
-#       link: "#"
-#       tagline: "A responsive website template designed to help startups promote their products or services and to attract users &amp; investors"
-
-#     - title: Atom
-#       link: "#"
-#       tagline: "A comprehensive website template solution for startups/developers to market their mobile apps."
-
-#     - title: Delta
-#       link: "#"
-#       tagline: "A responsive Bootstrap one page theme designed to help app developers promote their mobile apps"
-
-# oss:
-#   title: OSS Contributions
-#   intro: >
-#     오픈소스 컨트리뷰션 및 활동 내역
-#   contributions:
-#     - title: react-virtual
-#       link: "https://github.com/TanStack/virtual/pull/518"
-#       tagline: "Safari 크로스 브라우징 이슈 수정"
-
-#     - title: temen
-#       link: "https://fe-lib.lubycon.io/modules/Temen.html"
-#       tagline: "lodash 를 대체 하기 위한 차세대 FE 유틸"
-
-#     - title: quantumic-design
-#       link: "https://github.com/Lubycon/quantumic-design"
-#       tagline: "디자인시스템을 빠르게 구축 할 수 있도록 도와주는 UIKit"
-
-#     - title: dependency-cruiser
-#       link: "https://github.com/sverweij/dependency-cruiser/pull/577"
-#       tagline: "공식문서 버전 업데이트 후 반영 되지 않은 부분 수정"
-
-#     - title: redux-persist
-#       link: "https://github.com/TanStack/virtual/pull/518"
-#       tagline: "redux store 타입이 호환 되지 않아 dts 타입 수정"
-# publications:
-#   title: Publications
-#   intro: |
-#     You can list your publications in this section. Lorem ipsum dolor sit
-#     amet, consectetur adipiscing elit. Vestibulum et ligula in nunc
-#     bibendum fringilla a eu lectus.
-#   papers:
-#     - title: The Art of Computer Programming
-#       link: "#"
-#       authors: Donald E. Knuth
-#       conference: Addison-Wesley, 1968
-
-#     - title: "Genetic Programming III: Darwinian Invention &amp; Problem Solving"
-#       link: "#"
-#       authors: Koza, J.R., Andre, D., Bennett, F.H., Keane, M.A.
-#       conference: "Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, 1st edn. (1999)"
-
-#     - title: A syntax directed compiler for Algol 60
-#       link: "#"
-#       authors: Edgar T. Irons
-#       conference: "Comm. ACM 4 (1961), 51–55"
-
