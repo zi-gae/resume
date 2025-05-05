@@ -5,8 +5,8 @@ sidebar:
   tagline: Frontend Developrt
   avatar: geonwoo.jpg #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
-  email: doscmdev@gmail.com
-  phone: 010-4808-5382
+  # email: doscmdev@gmail.com
+  # phone: 010-4808-5382
   # timezone: America/Cancun Timezone
   citizenship:
   website: www.zigae.com
