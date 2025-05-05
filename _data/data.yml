@@ -53,11 +53,9 @@ skills:
 
     - name: React & Next
 
-    - name: Typescript
+    - name: Typescript, Node, Python, Express, GraphQL
 
-    - name: Node, Python
-
-    - name: Sentry, Github Actions, Jenkins
+    - name: Sentry, Github Actions, Jenkins, Datadog
 
     - name: AWS ECR, RCS, Fargate
 
@@ -67,11 +65,9 @@ ignite:
     - role: 현대, 기아, 제네시스 통합딜러포탈
       projects:
         - subTitle: 기술스택
-          details: react, ts, jenkins 수동 배포
+          details: React18, ts, react-query, turbo, Datadog, i18n
         - subTitle: 프로젝트소개
           details: 전세계 현대, 기아, 제네시스 딜러들에게 제공하는 포탈 및 관리 서비스
-        - subTitle: 추가사항
-          details: i18n 대응 추가
         - subTitle: 트러블슈팅
           details: |
             - MSA 구조로 되어 있는 서버별로 전달해야 하는 헤더 및 쿠키 정보가 달라 요청 모듈을 설계
@@ -87,7 +83,7 @@ ignite:
     - role: 기아 원앱
       projects:
         - subTitle: 기술스택
-          details: react, ts, 깃랩CI 기반 배포 파이프라인 설계, 태그 기반 배포
+          details: Next13, ts, react-query, turbo, Datadog, i18n
         - subTitle: 프로젝트소개
           details: 기아 차량 통합 앱 관리 프로젝트
         - subTitle: 추가사항
@@ -97,13 +93,12 @@ ignite:
             - 깃랩CI를 활용하여 배포 파이프라인을 설계 및 구현
               - 태그 생성 시 자동으로 빌드 및 배포 프로세스가 시작되도록 구성
               - 빌드 단계에서 코드 품질 검사 및 테스트 실행
-              - 성공적인 테스트 결과에 따라 Docker 이미지를 빌드하고 레지스트리에 푸시
               - 스테이징 및 프로덕션 환경으로 자동 배포되도록 단계적 파이프라인 설계
 
     - role: 기아 인증 중고차
       projects:
         - subTitle: 기술스택
-          details: next, ts, jenkins 기반 기술스택
+          details: Next13, ts, react-query, turbo
         - subTitle: 프로젝트소개
           details: 기아 인증 중고차 판매 사이트
 
@@ -191,7 +186,6 @@ experiences:
           details: |
             - 레거시 코드 전면 분석 및 최적화 리팩토링
             - 모바일/데스크탑 분리 컴포넌트의 공통화 작업
-            - JS 기반 디바이스 분기 → 미디어쿼리 기반으로 구조 정리
             - Suspense 및 ErrorBoundary 기반 에러 핸들링 구조 도입
             - 타입스크립트 타입 안정성 확보 위한 체이닝 리팩토링
         - subTitle: 트러블슈팅
