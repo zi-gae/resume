@@ -68,6 +68,11 @@ ignite:
           details: React18, ts, react-query, turbo, Datadog, i18n
         - subTitle: 프로젝트소개
           details: 전세계 현대, 기아, 제네시스 딜러들에게 제공하는 포탈 및 관리 서비스
+        - subTitle: 기여 내용
+          details: |
+            - 어드민, 서비스 앱 클라우드프론트 캐시 레이어 설정
+            - 복잡한 폼 RHF 기반으로 최적화
+            - prefetch 및 클라이언트 캐시를 통한 페이지 로딩 약 15% 속도 개선
         - subTitle: 트러블슈팅
           details: |
             - MSA 구조로 되어 있는 서버별로 전달해야 하는 헤더 및 쿠키 정보가 달라 요청 모듈을 설계
@@ -86,8 +91,12 @@ ignite:
           details: Next13, ts, react-query, turbo, Datadog, i18n
         - subTitle: 프로젝트소개
           details: 기아 차량 통합 앱 관리 프로젝트
-        - subTitle: 추가사항
-          details: i18n 대응 추가
+        - subTitle: 기여 내용
+          details: |
+            - 차량 관리 앱의 클라이언트 사이드 렌더링 최적화
+            - 차량 정보 페이지에서 차량 상태를 실시간으로 반영하는 기능 구현
+            - 차량 상태 변경 시, 서버와의 폴링을 통해 UI 업데이트
+            - PDF 뷰어 제어 가능한 커스텀 컴포넌트 개발
         - subTitle: 배포 파이프라인 설계
           details: |
             - 깃랩CI를 활용하여 배포 파이프라인을 설계 및 구현
