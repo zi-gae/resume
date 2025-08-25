@@ -1,12 +1,11 @@
 sidebar:
   position: right # position of the sidebar : left or right
   education: True # set to False if you want education in main section instead of in sidebar
-  name: 정건우
+  name: Noah
   tagline: Senior Frontend Developer
-  avatar: geonwoo.jpg #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
-  # email: doscmdev@gmail.com
-  # phone: 010-4808-5382
+  email: doscmdev@gmail.com
+  phone: 010-4808-5382
   # timezone: America/Cancun Timezone
   citizenship:
   website: www.zigae.com
@@ -46,12 +45,12 @@ skills:
     - name: React & Next.js 생태계
     - name: MSA 아키텍처 및 토큰 기반 인증 시스템
     - name: 테스트 주도 개발 (Jest, React Testing Library)
-    - name: AWS 인프라 (CloudFront, S3, ECR, Fargate)
+    - name: AWS 인프라 (CloudFront, EC2, Rotue53, S3, ECR, Fargate)
     - name: DevOps (Github Actions, Jenkins, Datadog, Sentry)
     - name: 백엔드 기술 (Node.js, Express, GraphQL)
 
 ignite:
-  title: 이그나이트 / 2024.03 - Present
+  title: 현대자동차 / 2024.03 - Present
   info:
     - role: 현대, 기아, 제네시스 통합딜러포탈
       projects:
@@ -220,7 +219,7 @@ experiences:
               - Barrel 파일 제거로 빌드 및 테스트 시간 <b>50% 이상 단축</b>
 
 brandy:
-  title: 브랜디 / 2019.12 - 2021.03
+  title: 카카오스타일 / 2019.12 - 2021.03
   info:
     - role: Next 교체
       projects:
@@ -237,5 +236,4 @@ brandy:
         - subTitle: 트러블 슈팅
           details: |
             - redux-persist에서 store 타입이 제대로 작성 되지 않아 타입스크립트에서 타입에러 발생
-              - redux-persit d.ts 파일 수정 PR 작성
-              - [https://github.com/rt2zz/redux-persist/pull/1278](https://github.com/rt2zz/redux-persist/pull/1278)
+              - redux-persit d.ts 파일 오픈소스 컨트리뷰트 통한 수정
