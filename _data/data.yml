@@ -4,8 +4,8 @@ sidebar:
   name: 정건우
   tagline: Frontend Developer
 
-  email: doscmdev@gmail.com
-  phone: 010-4808-5382
+  # email: doscmdev@gmail.com
+  # phone: 010-4808-5382
   # timezone: America/Cancun Timezone
   citizenship:
   website: www.zigae.com
@@ -219,7 +219,7 @@ experiences:
               - Barrel 파일 제거로 빌드 및 테스트 시간 <b>50% 이상 단축</b>
 
 brandy:
-  title: 카카오스타일 / 2019.12 - 2021.03
+  title: 브랜디 / 2019.12 - 2021.03
   info:
     - role: Next 교체
       projects:
