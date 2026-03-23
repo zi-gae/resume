@@ -1,6 +1,7 @@
 sidebar:
   position: right # position of the sidebar : left or right
   education: True # set to False if you want education in main section instead of in sidebar
+  avatar: avatar.jpg
   name: 정건우
   tagline: Frontend Developer
 
@@ -28,6 +29,7 @@ career-profile:
     - name: React/Next.js 기반 대규모 웹 서비스 개발 경험
     - name: 컴포넌트 설계와 디자인 시스템 구축 경험
     - name: 성능 최적화와 사용자 경험 개선에 관심이 많은 개발자
+    - name: 새로운 기술과 도전에 대한 학습과 적용에 적극적인 자세
 
 education:
   title: Education
@@ -118,11 +120,9 @@ ignite:
             - 매일 07:00 KST 스케줄 트리거로 SonarQube API에서 CRITICAL/BLOCKER 이슈를 자동 수집 (500건씩 페이지네이션, 최대 10,000건 처리)
             - JIRA label 기반 중복 방지: SonarQube 이슈 key를 label로 저장해 별도 DB 없이 처리 이력 추적
             - Claude Code CLI를 비대화형 모드로 실행, 파일별 이슈 목록을 프롬프트로 전달해 코드 자동 수정
-              - Edit/Read 도구만 허용(최소 권한)하여 파일 전체 덮어쓰기 방지
               - 이슈 외 파일 접근, 스타일 변경, 무관한 리팩토링 금지 프롬프트로 수정 범위 제한
             - Dynamic Child Pipeline으로 JIRA 티켓 수에 따라 병렬 잡을 동적 생성, FO/BO 동시 처리
             - 가장 최신 release/YYMMDD 브랜치를 자동 감지하여 티켓별 독립 MR 생성 (cherry-pick 기반)
-            - base64 인코딩으로 CI 변수 전달 시 YAML 특수문자 이스케이프 문제 원천 차단
         - subTitle: 개선 과정
           details: |
             - 타임아웃 문제: 단일 잡에서 전체 이슈 순차 처리 후 GitLab 15분 타임아웃 초과
