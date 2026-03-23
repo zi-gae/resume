@@ -185,7 +185,7 @@ experiences:
           details: |
             - MSA 기반 서브도메인 프론트엔드 모듈 구현 및 의존성 정의
             - React Query 캐싱 전략: staleTime/cacheTime 최적화로 API 호출 40% 절감 (Datadog APM 측정)
-            - 쿼리스트링 ↔ UI 상태 양방향 싱크 구현 (deep-link 지원)
+            - 쿼리스트링 <-> UI 상태 양방향 싱크 구현 (deep-link 지원)
             - 신입 개발자 1명 멘토링
             - PR 시 Lighthouse CI 기반 성능 회귀 방지 파이프라인 구축
         - subTitle: 트러블슈팅
