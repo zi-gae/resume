@@ -163,7 +163,7 @@ ignite:
           details: 기아 공식 인증 중고차 검색 및 구매 플랫폼
         - subTitle: 주요 성과
           details: |
-            - SSR + JSON-LD 기반 SEO 최적화로 검색 노출 순위 평균 12단계 상승 (Google Search Console 측정)
+            - SSR + JSON-LD 기반 SEO 최적화로 검색 노출 순위 개선 (Google Search Console 측정)
             - 차량 상세 페이지 로딩 최적화로 이탈률 18% 감소, 체류 시간 25% 증가 (GA 분석)
             - WCAG 2.1 AA 준수, 접근성 점수 67 후 91 (Lighthouse 측정)
             - 지연 로딩 + next/image 최적화로 LCP 2.4s 후 1.1s, CLS 0.25 후 0.05 (WebPageTest 측정)
