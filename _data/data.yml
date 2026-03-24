@@ -5,8 +5,8 @@ sidebar:
   name: 정건우
   tagline: Frontend Developer
 
-  # email: doscmdev@gmail.com
-  # phone: 010-4808-5382
+  email: doscmdev@gmail.com
+  phone: 010-4808-5382
   # timezone: America/Cancun Timezone
   citizenship:
   website: www.zigae.com
@@ -73,6 +73,12 @@ ignite:
           details: |
             - CloudFront 캐시 전략 수립으로 정적 자원 응답 시간 210ms -> 85ms로 개선 (CloudFront Metrics 기준)
             - Prefetch 및 클라이언트 캐싱으로 페이지 전환 시 LCP 1.8s -> 0.9s (Lighthouse CI 측정)
+            - Home 페이지 초기 API 호출 지연 개선 (Playwright 환경별 네트워크 타이밍 측정)
+              - Guard chain 순차 구조(useEffect 기반)로 ConsentGuard 완료까지 API 호출 지연 2.5~3s 발생
+              - HomePrefetcher를 ConsentGuard의 sibling으로 배치, AuthGuard 통과 직후 Guard 검사와 병렬로 prefetchQuery 시작
+              - Playwright로 3G/일반 네트워크 환경 Before/After API 타이밍 검증
+                - 3G: ConsentGuard -> API 간격 1873ms -> 1207ms (36% 개선)
+                - 일반: ConsentGuard -> API 간격 374ms -> 140ms (63% 개선)
         - subTitle: 트러블슈팅
           details: |
             - MSA 환경에서 도메인별 인증 방식과 요청 헤더가 달라 클라이언트 요청 실패 증가
